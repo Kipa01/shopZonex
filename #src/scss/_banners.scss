@@ -1,0 +1,59 @@
+.banners {
+   margin: 30px 0;
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -5px;
+      @media (max-width: 990px) {
+         flex-wrap: wrap;
+      }
+   }
+   &__col {
+      flex-basis: 33.33333%;
+      padding: 0 5px;
+      min-height: 290px;
+      @media (max-width: 1110px) {
+         min-height: 240px;
+      }
+      @media (max-width: 990px) {
+         min-height: 240px;
+         flex-basis: 50%;
+         margin-bottom: 10px;
+      }
+      @media (max-width: 660px) {
+         flex-basis: 100%;
+      }
+      @media (max-width: 480px) {
+         min-height: 200px;
+      }
+   }
+   &__item {
+      padding: 60px 55% 0 60px;
+      height: 100%;
+      @media (max-width: 1110px) {
+         padding: 25px 20% 0 25px;
+      }
+      @media (max-width: 660px) {
+         padding: 15px;
+      }
+      &--midseason {
+         background: url("../images/banners/midseason.png") no-repeat center;
+      }
+      &--summer {
+         background: url("../images/banners/summer.png") no-repeat center;
+      }
+      &--accs {
+         background: url("../images/banners/accs.png") no-repeat center;
+      }
+   }
+   &__title {
+      font-size: 36px;
+      line-height: 36px;
+      margin-bottom: 20px;
+      @media (max-width: 660px) {
+         font-size: 28px;
+         line-height: 25px;
+         margin-bottom: 10px;
+      }
+   }
+}

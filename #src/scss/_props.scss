@@ -1,0 +1,221 @@
+.props-catalog {
+   &__top {
+      padding-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: 768px) {
+         display: none;
+      }
+   }
+   &__columns {
+      display: flex;
+      align-items: center;
+   }
+}
+
+.props-columns {
+   &__label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+   }
+   &__list {
+      display: flex;
+      align-items: center;
+   }
+   &__item {
+      cursor: pointer;
+      font-size: 10px;
+      color: #858585;
+      padding: 0 7.5px;
+      transition: 0.2s linear;
+      @media (min-width: 991px) {
+         &:hover {
+            color: #151515;
+         }
+      }
+      &.active {
+         color: #151515;
+         &:after {
+            opacity: 1;
+            visibility: visible;
+         }
+      }
+      &:after {
+         bottom: -3px;
+      }
+   }
+}
+
+.catalog-choice {
+   margin-bottom: 10px;
+   display: none;
+   &__item {
+      padding: 5px 12px;
+      color: #454545;
+      font-size: 13px;
+      font-weight: 500;
+      background-color: #eeeeee;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      transition: 0.2s linear;
+      svg {
+         width: 8px;
+         height: 9px;
+         fill: #454545;
+         transition: 0.2s linear;
+         cursor: pointer;
+         margin-left: 3px;
+      }
+      @media (min-width: 991px) {
+         &:hover {
+            color: #fff;
+            background: #151515;
+            svg {
+               fill: #fff;
+            }
+         }
+      }
+   }
+   &__clear {
+      background: transparent;
+      cursor: pointer;
+      font-size: 13px;
+   }
+   &.active {
+      display: block;
+   }
+}
+
+.catalog-body {
+   margin: 0 -15px;
+   display: flex;
+   flex-wrap: wrap;
+   &__item {
+      position: relative;
+      padding: 0 15px;
+      margin-bottom: 50px;
+   }
+   &__image {
+      margin-bottom: 20px;
+      img {
+         max-width: 100%;
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+}
+
+[data-columns="3"] {
+   .catalog-body {
+      &__item {
+         flex: 0 1 33.33333%;
+         @media (max-width: 580px) {
+            flex: 0 1 50%;
+         }
+         @media (max-width: 420px) {
+            flex: 0 1 100%;
+         }
+      }
+   }
+}
+
+[data-columns="4"] {
+   .catalog-body {
+      &__item {
+         flex: 0 1 25%;
+         @media (max-width: 990px) {
+            flex: 0 1 33.3333%;
+         }
+         @media (max-width: 580px) {
+            flex: 0 1 50%;
+         }
+         @media (max-width: 420px) {
+            flex: 0 1 100%;
+         }
+      }
+   }
+}
+
+[data-columns="5"] {
+   .catalog-body {
+      &__item {
+         flex: 0 1 20%;
+         @media (max-width: 990px) {
+            flex: 0 1 33.3333%;
+         }
+         @media (max-width: 580px) {
+            flex: 0 1 50%;
+         }
+         @media (max-width: 420px) {
+            flex: 0 1 100%;
+         }
+      }
+   }
+}
+
+.pagging {
+   margin: 45px 0 100px;
+   display: flex;
+   justify-content: center;
+   &__list {
+      display: flex;
+      align-items: center;
+      li + li {
+         margin-left: 10px;
+      }
+   }
+   &__item {
+      width: 40px;
+      height: 40px;
+      border: 2px solid #eeeeee;
+      color: #000;
+      font-size: 10px;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.2s linear;
+      @media (min-width: 991px) {
+         &:hover {
+            background-color: #151515;
+            color: #fff;
+         }
+      }
+      &.active {
+         background-color: #151515;
+         color: #fff;
+      }
+   }
+   &__next {
+      width: 80px;
+      height: 40px;
+      border: 2px solid #eeeeee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #858585;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: 0.2s linear;
+      margin-left: 10px;
+      svg {
+         margin-left: 5px;
+         width: 5px;
+         height: 9px;
+         color: #858585;
+         transition: 0.2s linear;
+      }
+      @media (min-width: 991px) {
+         &:hover {
+            background-color: #151515;
+            color: #fff;
+            svg {
+               color: #fff;
+            }
+         }
+      }
+   }
+}

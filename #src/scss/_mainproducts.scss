@@ -1,0 +1,107 @@
+.mainproducts {
+   &__nav {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+      @media (max-width: 520px) {
+         margin-bottom: 20px;
+      }
+   }
+   &__body {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+      display: none;
+      &.active {
+         display: flex;
+      }
+   }
+   &__col {
+      flex: 0 1 20%;
+      padding: 0 15px;
+      margin-bottom: 80px;
+      position: relative;
+      &:nth-last-child(-n + 5) {
+         margin-bottom: 0;
+      }
+      @media (max-width: 1110px) {
+         flex: 0 1 25%;
+      }
+      @media (max-width: 990px) {
+         flex: 0 1 33.33333%;
+         margin-bottom: 40px;
+      }
+      @media (max-width: 768px) {
+         flex: 0 1 50%;
+         margin-bottom: 20px;
+      }
+      @media (max-width: 520px) {
+         flex: 0 1 100%;
+         margin-bottom: 20px;
+      }
+   }
+   &__item {
+      position: relative;
+   }
+   &__image {
+      margin-bottom: 20px;
+   }
+}
+
+.nav-mainproducts {
+   &__list {
+      display: flex;
+      align-items: center;
+      @media (max-width: 520px) {
+         flex-direction: column;
+         justify-content: center;
+      }
+   }
+
+   &__item {
+      cursor: pointer;
+      color: #858585;
+      @media (min-width: 991px) {
+         &:hover {
+            color: #151515;
+         }
+      }
+      &.active {
+         color: #151515;
+         &:after {
+            opacity: 1;
+            visibility: visible;
+         }
+      }
+      & + & {
+         margin-left: 35px;
+         @media (max-width: 520px) {
+            margin: 15px 0 0 0;
+         }
+      }
+   }
+}
+
+.more-mainproducts {
+   display: flex;
+   justify-content: center;
+   margin: 90px;
+   position: relative;
+   &__btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #858585;
+      font-size: 13px;
+      position: relative;
+      cursor: pointer;
+      background: transparent;
+      &:after {
+         content: "";
+         background: url("../images/icons/arrow-down.png") no-repeat center;
+         width: 12px;
+         height: 21px;
+         margin-top: 10px;
+      }
+   }
+}

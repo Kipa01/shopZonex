@@ -1,0 +1,172 @@
+.catalog-intro {
+   margin-top: 90px;
+   @media (max-width: 580px) {
+      margin-top: 110px;
+   }
+   &__body {
+      background-color: #f8f8f8;
+      position: relative;
+   }
+}
+
+.slider-catalog-intro {
+   &__slide {
+      padding: 0 248px 0 108px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: 1110px) {
+         padding: 0 100px;
+      }
+      @media (max-width: 990px) {
+         padding: 0 60px;
+      }
+      @media (max-width: 768px) {
+         padding: 30px 70px;
+         justify-content: center;
+         text-align: center;
+      }
+   }
+   &__arrow {
+      width: 48px;
+      height: 48px;
+      border: 1px solid #151515;
+      position: relative;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translate(0%, -50%);
+      transition: 0.2s linear;
+      @media (max-width: 580px) {
+         width: 35px;
+         height: 35px;
+         transform: translate(0%, 0%);
+         top: auto;
+         bottom: 100%;
+      }
+      &:before {
+         content: "";
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+         width: 16px;
+         height: 8px;
+         background: url("../images/icons/catalog-slider-arrow-notactive.png") no-repeat center;
+      }
+      &--next {
+         right: 30px;
+         @media (max-width: 990px) {
+            right: 5px;
+         }
+         @media (max-width: 768px) {
+            right: 15px;
+         }
+         @media (max-width: 580px) {
+            right: 0;
+         }
+         &:before {
+            transform: translate(-50%, -50%) rotate(180deg);
+         }
+         @media (min-width: 991px) {
+            &:hover:before {
+               background: url("../images/icons/catalog-slider-arrow-active.png") no-repeat center;
+               transform: translate(-50%, -50%);
+            }
+         }
+      }
+      &--prev {
+         left: 30px;
+         @media (max-width: 990px) {
+            left: 5px;
+         }
+         @media (max-width: 768px) {
+            left: 15px;
+         }
+         @media (max-width: 580px) {
+            left: auto;
+            right: 40px;
+         }
+         @media (min-width: 991px) {
+            &:hover:before {
+               transform: translate(-50%, -50%) rotate(180deg);
+               background: url("../images/icons/catalog-slider-arrow-active.png") no-repeat center;
+            }
+         }
+      }
+      @media (min-width: 991px) {
+         &:hover {
+            background: #151511;
+         }
+      }
+   }
+}
+
+.slide-catalog-intro {
+   &__col {
+      &:last-child {
+         @media (max-width: 768px) {
+            display: none;
+         }
+      }
+   }
+   &__title {
+      max-width: 380px;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 45px;
+      margin-bottom: 15px;
+      @media (max-width: 768px) {
+         margin-bottom: 10px;
+         font-size: 30px;
+         line-height: 38px;
+      }
+      @media (max-width: 580px) {
+         font-size: 22px;
+         line-height: 24px;
+      }
+   }
+   &__text {
+      max-width: 390px;
+      color: #454545;
+      font-size: 15px;
+      line-height: 28px;
+      margin-bottom: 35px;
+      @media (max-width: 768px) {
+         margin-bottom: 15px;
+      }
+      @media (max-width: 580px) {
+         font-size: 13px;
+         margin-bottom: 10px;
+         line-height: 18px;
+      }
+   }
+   &__btns {
+      display: flex;
+      @media (max-width: 768px) {
+         justify-content: center;
+      }
+   }
+   &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 145px;
+      height: 48px;
+      border: 1px solid #151515;
+      transition: 0.2s linear;
+      & + & {
+         margin-left: 15px;
+      }
+      @media (min-width: 991px) {
+         &:hover {
+            background-color: #151515;
+            color: #fff;
+         }
+      }
+      @media (max-width: 580px) {
+         width: 120px;
+         height: 40px;
+      }
+   }
+}
